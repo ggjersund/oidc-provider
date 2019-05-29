@@ -18,7 +18,13 @@ lib/
 lib64/
 parts/
 sdist/
-var/
+var/*
+!var/media
+!var/static
+var/media/*
+var/static/*
+!var/media/.gitkeep
+!var/static/.gitkeep
 wheels/
 *.egg-info/
 .installed.cfg
