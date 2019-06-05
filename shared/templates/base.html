@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{% endblock %}</title>
+        {% block meta %}{% endblock %}
+        <!-- stylesheets -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome.min.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/custom.min.css' %}"/>
+        {% block stylesheet %}{% endblock %}
+        <!-- extra -->
+        {% block extra %}{% endblock %}
+    </head>
+    <body class="d-flex flex-column vh-100 bg-light">
+        <!-- content -->
+        {% block header %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
+        <!-- javascript -->
+        <script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        {% block javascript %}{% endblock %}
+    </body>
+</html>

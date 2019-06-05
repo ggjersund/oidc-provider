@@ -13,8 +13,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 SECRET_KEY = 'wtuxxa(p24&6d9)g*wyd(^ci)53!ys!bl!h9up((t*)lohyhgk'
 
-CORS_ORIGIN_ALLOW_ALL = True
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -34,7 +32,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 
 # Static files (CSS, JavaScript, Images)
@@ -57,12 +54,15 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # External dependencies
-    'oauth2_provider',
-    'corsheaders',
+    'user_sessions',
+    'oidc_provider',
+    'django_otp',
+    'django_otp.plugins.otp_static',
+    'django_otp.plugins.otp_totp',
+    'two_factor',
     # Internal dependencies
     'apps.users',
     'apps.authentication',
@@ -70,11 +70,11 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    'apps.users.middleware.TempFixUserSessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_otp.middleware.OTPMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -106,22 +106,36 @@ WSGI_APPLICATION = 'accounts.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
 ]
+
+
+# Django user sessions
+# https://django-user-sessions.readthedocs.io/en/stable/installation.html#installation
+
+SESSION_ENGINE = 'user_sessions.backends.db'
 
 
 # Custom user model
 # https://docs.djangoproject.com/en/2.2/topics/auth/customizing/#substituting-a-custom-user-model
 
 AUTH_USER_MODEL = 'users.User'
+
+
+# Login settings
+# https://docs.djangoproject.com/en/2.2/ref/settings/#login-url
+
+LOGIN_URL = 'two_factor:login'
+
+LOGIN_REDIRECT_URL = 'account/'
+
+LOGOUT_REDIRECT_URL = 'two_factor:login'
+
+
+# Geo-location data
+# https://docs.djangoproject.com/en/2.2/ref/contrib/gis/geoip2/
+
+GEOIP_PATH = os.path.join(BASE_DIR, 'shared/static/geodata')

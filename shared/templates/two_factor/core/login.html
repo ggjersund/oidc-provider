@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% load i18n two_factor %}
+
+{% block content %}
+<div class="container my-auto">
+  <div class="row justify-content-md-center">
+    <div class="d-none d-md-block col-6 col-lg-4 bg-white shadow border border-right-0 p-0">
+      <div class="d-flex h-100 text-center">
+        <h3 class="my-auto mx-auto">Random content</h3>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 bg-white shadow border p-3">
+      {% include 'logo.html' %}
+      <hr>
+      {% if wizard.steps.current == 'auth' %}
+      {% elif wizard.steps.current == 'token' %}
+        {% if device.method == 'call' %}
+        {% elif device.method == 'sms' %}
+        {% else %}
+          <p>{% trans "Please enter your two-factor authentication token" %}</p>
+        {% endif %}
+      {% elif wizard.steps.current == 'backup' %}
+        <p>{% trans "Please enter one of your backup tokens to recover your account" %}</p>
+      {% endif %}
+      <form action="" method="POST">
+        {% csrf_token %}
+        {{ wizard.management_form }}
+        {% if wizard.steps.current == 'auth' %}
+          <div class="form-group">
+            <label for="{{ wizard.form.username.id_for_label }}">{{ wizard.form.username.label }}</label>
+            <input class="form-control"
+            type="email"
+            id="{{ wizard.form.username.id_for_label }}"
+            name="{{ wizard.form.username.html_name }}"
+            placeholder="{{ wizard.form.username.label }}"
+            required="true"
+            autofocus="true">
+          </div>
+          <div class="form-group">
+            <label for="{{ wizard.form.password.id_for_label }}">{{ wizard.form.password.label }}</label>
+            <input class="form-control"
+            type="password"
+            id="{{ wizard.form.password.id_for_label }}"
+            name="{{ wizard.form.password.html_name }}"
+            placeholder="{{ wizard.form.password.label }}"
+            required="true"
+            autocomplete="false">
+          </div>
+        {% else %}
+          {% if wizard.steps.current == 'token' %}
+            <div class="form-group">
+              <input class="form-control text-center"
+              type="number"
+              min="1"
+              max="999999"
+              id="{{ wizard.form.otp_token.id_for_label }}"
+              name="{{ wizard.form.otp_token.html_name }}"
+              placeholder="{{ wizard.form.otp_token.label }}"
+              autofocus="true">
+            </div>
+          {% else %}
+            <div class="form-group">
+              <input class="form-control text-center"
+              type="text"
+              min="1"
+              max="999999"
+              id="{{ wizard.form.otp_token.id_for_label }}"
+              name="{{ wizard.form.otp_token.html_name }}"
+              placeholder="{{ wizard.form.otp_token.label }}"
+              autofocus="true">
+            </div>
+          {% endif %}
+        {% endif %}
+
+        {% if wizard.steps.current == 'auth' %}
+          <button type="submit" class="btn btn-block btn-primary">{% trans "Sign in" %}</button>
+          <a class="small d-block mt-3 mb-0 text-center" href="#">Forgot password?</a>
+        {% else %}
+          <button type="submit" class="btn btn-block btn-primary">{% trans "Continue" %}</button>
+        {% endif %}
+        {% if cancel_url and wizard.steps.current != 'auth' and wizard.steps.current != 'backup' %}
+          <a href="{{ cancel_url }}" class="btn btn-block btn-danger">{% trans "Cancel" %}</a>
+        {% endif %}
+        {% if wizard.steps.prev and wizard.steps.current != 'auth' and wizard.steps.current != 'token' %}
+          <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" class="btn btn-block btn-secondary">{% trans "Back" %}</button>
+        {% endif %}
+
+        {% if other_devices %}
+          {% for other in other_devices %}
+            <button name="challenge_device" value="{{ other.persistent_id }}" class="btn btn-default btn-block" type="submit">
+              {{ other|device_action }}
+            </button>
+          {% endfor %}
+        {% endif %}
+
+        {% if backup_tokens %}
+          <div class="text-center mt-2">
+            <small>{% trans "Lost access?" %}</small>
+            <button name="wizard_goto_step" type="submit" value="backup" class="btn btn-sm btn-block btn-link">
+              {% trans "Use Backup Token" %}
+            </button>
+          </div>
+        {% endif %}
+      </form>
+      {% if wizard.steps.current == 'auth' %}
+      <hr>
+      <div class="text-center">
+        <small>Dont have an account? <a href="#">Sign up.</a></small>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <p class="small text-muted text-center m-2">Linjeforeningen Nabla &copy; {% now 'Y' %}</p>
+</div>
+{% endblock %}

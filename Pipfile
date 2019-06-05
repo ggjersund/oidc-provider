@@ -7,8 +7,11 @@ verify_ssl = true
 
 [packages]
 django = "*"
-django-oauth-toolkit = "*"
 django-cors-middleware = "*"
+django-oidc-provider = "*"
+django-two-factor-auth = "*"
+django-user-sessions = "*"
+geoip2 = "*"
 
 [requires]
 python_version = "3.7"

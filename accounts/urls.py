@@ -18,10 +18,14 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
+from two_factor.urls import urlpatterns as tf_urls
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path('accounts/', include(('apps.authentication.urls', 'authentication'))),
+    path('openid/', include('oidc_provider.urls', namespace='oidc_provider')),
+    path('', include(tf_urls)),
+    path('', include('user_sessions.urls', 'user_sessions')),
+    #path('accounts/', include('apps.authentication.urls', namespace='authentication')),
 ]
 
 if settings.DEBUG:
