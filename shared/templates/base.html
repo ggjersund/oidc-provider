@@ -17,13 +17,13 @@
         <!-- extra -->
         {% block extra %}{% endblock %}
     </head>
-    <body class="d-flex flex-column vh-100 bg-light">
+    <body class="d-flex flex-column vh-100 bg-gradient">
         <!-- content -->
         {% block header %}{% endblock %}
         {% block content %}{% endblock %}
         {% block footer %}{% endblock %}
         <!-- javascript -->
-        <script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"></script>
+        <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
         {% block javascript %}{% endblock %}
     </body>

@@ -25,10 +25,10 @@
         },
         "certifi": {
             "hashes": [
-                "sha256:59b7658e26ca9c7339e00f8f4636cdfe59d34fa37b9b04f6f9e9926b3cece1a5",
-                "sha256:b26104d6835d1f5e49452a26eb2ff87fe7090b89dfcaee5ea2212697e1e1d7ae"
+                "sha256:046832c04d4e752f37383b628bc601a7ea7211496b4638f6514d0e5b9acc4939",
+                "sha256:945e3ba63a0b9f577b1395204e13c3a231f9bc0223888be653286534e5873695"
             ],
-            "version": "==2019.3.9"
+            "version": "==2019.6.16"
         },
         "chardet": {
             "hashes": [
@@ -39,18 +39,19 @@
         },
         "django": {
             "hashes": [
-                "sha256:753d30d3eb078064d2ddadfea65083c9848074a7f93d7b4dc7fa6b1380d278f5",
-                "sha256:7cb67e8b934fab23b6daed7144da52e8a25a47eba7f360ca43d2b448506b01ad"
+                "sha256:16a5d54411599780ac9dfe3b9b38f90f785c51259a584e0b24b6f14a7f69aae8",
+                "sha256:9a2f98211ab474c710fcdad29c82f30fc14ce9917c7a70c3682162a624de4035"
             ],
             "index": "pypi",
-            "version": "==2.2.2"
+            "version": "==2.2.4"
         },
         "django-cors-middleware": {
             "hashes": [
-                "sha256:25d7e3132e9533be83f62767fca9dc92d66ac9aee414559144ccbce2c2913d70"
+                "sha256:85904a3401e7bc0c86502ff2b01d726917af3aaa7dafb77799b27ace637e8c92",
+                "sha256:bca8888ed33a94ba5472bde37ed71ec3d08231d6817fd4d799296b016073da95"
             ],
             "index": "pypi",
-            "version": "==1.3.1"
+            "version": "==1.4.0"
         },
         "django-formtools": {
             "hashes": [
@@ -81,11 +82,11 @@
         },
         "django-two-factor-auth": {
             "hashes": [
-                "sha256:5968daad24fcb756d95394c6bd5161e918f6a2f07a6e4c3e8a4b4aaceb650516",
-                "sha256:b013bf14fa78921bde135ec8794a4ee0125676ab47c232bebcdff211ad7e767e"
+                "sha256:464c33bcbd2f43470adc5f9b1c1957c8afad7bbada08a92c95031d26e7a8dd73",
+                "sha256:df45c2aafce5174c2c0ccc15740f6bb3bb78402b6bd27223d87cb3ba3ee52626"
             ],
             "index": "pypi",
-            "version": "==1.8.0"
+            "version": "==1.9.1"
         },
         "django-user-sessions": {
             "hashes": [
@@ -122,13 +123,6 @@
             ],
             "version": "==1.4.1"
         },
-        "phonenumberslite": {
-            "hashes": [
-                "sha256:2b9bf31ecc30abbc183d284fde81c62f5fa495f23611ecc46df658e0a59a4494",
-                "sha256:75e40b9c3517a2da375f7271e5d61178675666038d80c757161c1f5f4d0543fa"
-            ],
-            "version": "==8.10.13"
-        },
         "pycryptodomex": {
             "hashes": [
                 "sha256:029c7a150347c81899c14de0e4d5f918b8a0c68e8b0108dbe6192ad24358a845",
@@ -164,16 +158,16 @@
         },
         "pyjwkest": {
             "hashes": [
-                "sha256:128e3c81d02993ac4cd7e29ef7aac767d91daa59380e6883ae589092945e4aad"
+                "sha256:5560fd5ba08655f29ff6ad1df1e15dc05abc9d976fcbcec8d2b5167f49b70222"
             ],
-            "version": "==1.4.0"
+            "version": "==1.4.2"
         },
         "pytz": {
             "hashes": [
-                "sha256:303879e36b721603cc54604edcac9d20401bdbe31e1e4fdee5b9f98d5d31dfda",
-                "sha256:d747dd3d23d77ef44c6a3526e274af6efeb0a6f1afd5a69ba4d5be4098c8e141"
+                "sha256:26c0b32e437e54a18161324a2fca3c4b9846b74a8dccddd843113109e1116b32",
+                "sha256:c894d57500a4cd2d5c71114aaab77dbab5eabd9022308ce5ac9bb93a60a6f0c7"
             ],
-            "version": "==2019.1"
+            "version": "==2019.2"
         },
         "qrcode": {
             "hashes": [

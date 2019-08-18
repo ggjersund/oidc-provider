@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-md-center pt-2 pr-2 pl-2">
+    <div class="col-12 col-md-10 col-lg-8 bg-white shadow rounded-lg p-0">
+      {% include "menu.html" %}
+    </div>
+  </div>
+  <div class="row justify-content-md-center pt-2 pr-2 pl-2">
+    <div class="col-12 col-md-10 col-lg-8 bg-white shadow rounded-lg p-3">
+      <p>Konto</p>
+    </div>
+  </div>
+  {% include 'footer.html' %}
+</div>
+{% endblock %}

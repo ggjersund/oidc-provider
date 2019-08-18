@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-18 13:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/users/admin.py:35
+msgid "Personal info"
+msgstr ""
+
+#: apps/users/admin.py:36
+msgid "Permissions"
+msgstr ""
+
+#: apps/users/admin.py:39
+msgid "Important dates"
+msgstr ""
+
+#: apps/users/admin.py:124
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: apps/users/admin.py:134
+msgid "Password changed successfully."
+msgstr ""
+
+#: apps/users/admin.py:154
+#, python-format
+msgid "Change password: %s"
+msgstr ""
+
+#: apps/users/models.py:41
+msgid "email address"
+msgstr ""
+
+#: apps/users/models.py:44
+msgid "A user with that email already exists."
+msgstr ""
+
+#: apps/users/models.py:47
+msgid "uuid"
+msgstr ""
+
+#: apps/users/models.py:48
+msgid "first name"
+msgstr ""
+
+#: apps/users/models.py:49
+msgid "middle name"
+msgstr ""
+
+#: apps/users/models.py:50
+msgid "last name"
+msgstr ""
+
+#: apps/users/models.py:51
+msgid "date of birth"
+msgstr ""
+
+#: apps/users/models.py:52
+msgid "active"
+msgstr ""
+
+#: apps/users/models.py:53
+msgid "staff status"
+msgstr ""
+
+#: apps/users/models.py:54
+msgid "date joined"
+msgstr ""
+
+#: apps/users/models.py:63
+msgid "user"
+msgstr ""
+
+#: apps/users/models.py:64
+msgid "users"
+msgstr ""

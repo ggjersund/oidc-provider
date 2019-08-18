@@ -21,9 +21,10 @@ LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
     ('nb', 'norsk (bokmål)'),
-    ('nn', 'norsk (Nynorsk)'),
     ('en', 'English'),
 ]
+
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'shared/locale'),]
 
 TIME_ZONE = 'Europe/Oslo'
 
@@ -64,12 +65,14 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_totp',
     'two_factor',
     # Internal dependencies
+    'apps.account',
     'apps.users',
     'apps.authentication',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'apps.users.middleware.TempFixUserSessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -130,7 +133,7 @@ AUTH_USER_MODEL = 'users.User'
 
 LOGIN_URL = 'two_factor:login'
 
-LOGIN_REDIRECT_URL = 'account/'
+LOGIN_REDIRECT_URL = 'account:index'
 
 LOGOUT_REDIRECT_URL = 'two_factor:login'
 
