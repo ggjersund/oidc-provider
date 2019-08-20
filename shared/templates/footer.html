@@ -5,7 +5,7 @@
       <div class="col mt-2 text-center">
         <form class="mb-1" action="{% url 'set_language' %}" method="post">{% csrf_token %}
           <input name="next" type="hidden" value="{{ redirect_to }}">
-          <select class="small" name="language" onchange="this.form.submit()">
+          <select class="small shadow-sm" name="language" onchange="this.form.submit()">
             {% get_current_language as LANGUAGE_CODE %}
             {% get_available_languages as LANGUAGES %}
             {% get_language_info_list for LANGUAGES as languages %}
@@ -16,7 +16,7 @@
             {% endfor %}
           </select>
         </form>
-        <p class="small text-muted">Gjersund &copy; {% now 'Y' %}</p>
+        <p class="small text-muted">OPENID &copy; {% now 'Y' %}</p>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@ from . base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['beta.accounts.gjersund.com']
+ALLOWED_HOSTS = ['beta.example.com']
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 

@@ -1,7 +1,7 @@
 .bg-gradient {
-  background: rgb(255,255,255);
-  background: -moz-radial-gradient(circle, rgba(255,255,255,1) 4%, rgba(230,230,230,1) 55%, rgba(217,217,217,1) 87%);
-  background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 4%, rgba(230,230,230,1) 55%, rgba(217,217,217,1) 87%);
-  background: radial-gradient(circle, rgba(255,255,255,1) 4%, rgba(230,230,230,1) 55%, rgba(217,217,217,1) 87%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#d9d9d9",GradientType=1);
+  background: rgb(198,198,198);
+  background: -moz-radial-gradient(circle, rgba(198,198,198,1) 0%, rgba(219,219,219,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(198,198,198,1) 0%, rgba(219,219,219,1) 100%);
+  background: radial-gradient(circle, rgba(198,198,198,1) 0%, rgba(219,219,219,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c6c6c6",endColorstr="#dbdbdb",GradientType=1);
 }

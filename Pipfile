@@ -6,12 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
+Django = "*"
 django-cors-middleware = "*"
 django-oidc-provider = "*"
 django-two-factor-auth = "*"
 django-user-sessions = "*"
 geoip2 = "*"
+phonenumbers = "*"
 
 [requires]
 python_version = "3.7"
