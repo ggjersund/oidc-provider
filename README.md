@@ -1,9 +1,9 @@
 # OpenID Connect with 2 Factor Authentication and Session Handling
 
-![alt text](https://imgur.com/wzRiO1T "Login landing")
+![](https://i.imgur.com/wzRiO1T.png "Login landing")
 
-![alt text](https://imgur.com/kOriDoy "Login 2FA")
+![](https://i.imgur.com/kOriDoy.png "Login 2FA")
 
-![alt text](https://imgur.com/INxgquv "Dashboard menu")
+![](https://i.imgur.com/INxgquv.png "Dashboard menu")
 
-![alt text](https://imgur.com/DNSCLIQ "Dashboard sessions")
+![](https://i.imgur.com/DNSCLIQ.png "Dashboard sessions")
