@@ -18,10 +18,10 @@
     "default": {
         "babel": {
             "hashes": [
-                "sha256:af92e6106cb7c55286b25b38ad7695f8b4efb36a90ba483d7f7a6628c46158ab",
-                "sha256:e86135ae101e31e2c8ec20a4e0c5220f4eed12487d5cf3f78be7e98d3a57fc28"
+                "sha256:1aac2ae2d0d8ea368fa90906567f5c08463d98ade155c0c4bfedd6a0f7160e38",
+                "sha256:d670ea0b10f8b723672d3a6abeb87b565b244da220d76b4dba1b66269ec152d4"
             ],
-            "version": "==2.7.0"
+            "version": "==2.8.0"
         },
         "certifi": {
             "hashes": [
@@ -55,10 +55,10 @@
         },
         "django-formtools": {
             "hashes": [
-                "sha256:7703793f1675aa6e871f9fed147e8563816d7a5b9affdc5e3459899596217f7c",
-                "sha256:cb2bd7c29c2104278e5a0e76f7ff256b9570acf11485d547ee0c1b35347359fb"
+                "sha256:304fa777b8ef9e0693ce7833f885cb89ba46b0e46fc23b01176900a93f46742f",
+                "sha256:c5272c03c1cd51b2375abf7397a199a3148a9fbbf2f100e186467a84025d13b2"
             ],
-            "version": "==2.1"
+            "version": "==2.2"
         },
         "django-oidc-provider": {
             "hashes": [
@@ -69,10 +69,10 @@
         },
         "django-otp": {
             "hashes": [
-                "sha256:1b6025bbbd2517b7c246828b1d11c83d53567904836ae6d57bc0058f3cd18b50",
-                "sha256:76a698466178ce40473726ffd8c33f68d1c47f27c53f67fa4aeeb6fdde74d37b"
+                "sha256:1f16c2b93fe484706ff16ac6f5e64ecc73dd240318c333e0560384ba548d3837",
+                "sha256:cd4975539be478417033561e9832a1a69a583189f680e92a649f412c661f90aa"
             ],
-            "version": "==0.7.4"
+            "version": "==0.7.5"
         },
         "django-phonenumber-field": {
             "hashes": [
@@ -90,11 +90,11 @@
         },
         "django-user-sessions": {
             "hashes": [
-                "sha256:5d47ca6dc258662424c88383717a9f5c74b582c5646f9164f4bd6a9f3c3ea138",
-                "sha256:b626eb9acd4b60f09d6222c772277717b78e0fde3c5772a7d3a309866b5e9f55"
+                "sha256:1e8c9c06f932e0d3090defdd2977221fe2465ed838655856532da1325a9a5180",
+                "sha256:e23d8860eb5a913ee345c198401b179af092b39d33eac61f1e49c9091e74e38c"
             ],
             "index": "pypi",
-            "version": "==1.6.0"
+            "version": "==1.7.1"
         },
         "future": {
             "hashes": [
@@ -119,9 +119,9 @@
         },
         "maxminddb": {
             "hashes": [
-                "sha256:449a1713d37320d777d0db286286ab22890f0a176492ecf3ad8d9319108f2f79"
+                "sha256:d0ce131d901eb11669996b49a59f410efd3da2c6dbe2c0094fe2fef8d85b6336"
             ],
-            "version": "==1.5.1"
+            "version": "==1.5.2"
         },
         "phonenumbers": {
             "hashes": [
@@ -133,10 +133,10 @@
         },
         "phonenumberslite": {
             "hashes": [
-                "sha256:294f46126289c0843c94c7e7f7efa9b1a4dd7b95c159a81d75dcd6b38fea842c",
-                "sha256:a1086ffa60cb3dd0f8bddf9b59c86995dbc84da2943a4a4204fe70fd6bac608b"
+                "sha256:397a913259b6b5c4d9da06c87c16d53108f493e2a0b3196cc48cb59acc92f245",
+                "sha256:81670aa5434393362a6d36a71bcec49023cdaa36ec0d706d93c8cf2bb926958d"
             ],
-            "version": "==8.11.0"
+            "version": "==8.11.2"
         },
         "pycryptodomex": {
             "hashes": [
@@ -204,10 +204,10 @@
         },
         "six": {
             "hashes": [
-                "sha256:1f1b7d42e254082a9db6279deae68afb421ceba6158efa6131de7b3003ee93fd",
-                "sha256:30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66"
+                "sha256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a",
+                "sha256:8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"
             ],
-            "version": "==1.13.0"
+            "version": "==1.14.0"
         },
         "sqlparse": {
             "hashes": [
@@ -218,10 +218,10 @@
         },
         "urllib3": {
             "hashes": [
-                "sha256:a8a318824cc77d1fd4b2bec2ded92646630d7fe8619497b142c84a9e6f5a7293",
-                "sha256:f3c5fd51747d450d4dcf6f923c81f78f811aab8205fda64b0aba34a4e48b0745"
+                "sha256:2f3db8b19923a873b3e5256dc9c2dedfa883e33d87c690d9c7913e1f40673cdc",
+                "sha256:87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"
             ],
-            "version": "==1.25.7"
+            "version": "==1.25.8"
         }
     },
     "develop": {}
